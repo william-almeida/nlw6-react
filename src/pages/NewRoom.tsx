@@ -25,7 +25,7 @@ export function NewRoom() {
             </Button>
           </form>
           <p>
-            Quer entrar em uma sala existente? <a href="https://www.instagram.com">clique aqui.</a>
+            Quer entrar em uma sala existente? <a href="https://www.instagram.com/willliam.dev" target="noreferrer noopener">clique aqui.</a>
           </p>
 
 
