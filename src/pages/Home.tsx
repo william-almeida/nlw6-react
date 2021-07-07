@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { Button } from '../components/Button';
+import { auth, firebase } from '../services/firebase'
 
 import illustratioinsImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
@@ -11,8 +12,14 @@ export function Home() {
   // 'use' preifx is a hook
   const history = useHistory()
 
-  function navigateToNewRom() {
-    history.push('/rooms/new')
+  function handleCreateRoom() {
+    const provider =  new firebase.auth.GoogleAuthProvider()
+    auth.signInWithPopup(provider).then(result => {
+      console.log(result)
+    }
+
+    )
+    // history.push('/rooms/new')
   }
 
   return (
@@ -27,7 +34,7 @@ export function Home() {
         <div className="main-content">
           <img src={logoImg} alt="Letmeask logo" />
           
-          <button onClick={navigateToNewRom} className="create-room" >
+          <button onClick={handleCreateRoom} className="create-room" >
             <img src={googleIconImg} alt="Logo do Google" />
             Crie a sua sala com o google
           </button>
