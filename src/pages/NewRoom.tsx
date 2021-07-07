@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '../components/Button';
 import illustratioinsImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
@@ -25,7 +26,7 @@ export function NewRoom() {
             </Button>
           </form>
           <p>
-            Quer entrar em uma sala existente? <a href="https://www.instagram.com/willliam.dev" target="noreferrer noopener">clique aqui.</a>
+            Quer entrar em uma sala existente? <Link to="/"> Click aqui </Link>
           </p>
 
 
